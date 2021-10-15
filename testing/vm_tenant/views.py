@@ -34,7 +34,7 @@ class signup(APIView):
         password=request.data['password']
         name=request.data['name']
 
-        useravail=UserSerializer(data={**request.data})
+        useravail=UserSerializer(data=request.data)
         if useravail.is_valid():
             user=User.objects.create(username=email,email=email,first_name=name)
             user.set_password(password)
@@ -77,7 +77,7 @@ class social_signup(APIView):
         name=request.data['name']
         provider=request.data['provider']
 
-        useravail=SocialUserSerializer(data={**request.data})
+        useravail=SocialUserSerializer(data=request.data)
         if useravail.is_valid():
             user=SocialUser.objects.create(username=email,email=email,name=name,provider=provider)
             user.password=password
