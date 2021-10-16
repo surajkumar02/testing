@@ -1,5 +1,18 @@
 # testing
 
+For virtual Enviornment:
+
+    # for linux 
+    python3 -m pip install --user virtualenv
+    python3 -m venv env
+    source env/bin/activate
+
+    # for windows
+    py -m pip install --user virtualenv 
+    py -m venv env
+    ./env/Scripts/activate OR ./env/Scripts/activate.bat (if not working)
+
+
 
 install dependencies...
 - pip install djangorestframework
